@@ -18,15 +18,22 @@ total_scores <- function(survey_data, scale_num, vector_num) {
 ```
 
 #2-------------------------------------------------------------------------------------------------
+```{r include=FALSE}
+install.packages("here")
+```
+
 
 ```{r include=FALSE}
-survey_scores <- read.csv("Book1.csv",
+survey_scores <- read.csv("Survey_Data.csv",
                           header = TRUE,
                           sep = ",")
+```
+
+```{r}
+complete_surv_data <- total_scores(survey_scores[,2:9],5,c(3,5,8))
+
+write.csv(complete_surv_data, file = "Final_Survey_Data.csv")
 
 ```
-#3
-
-
 
 
