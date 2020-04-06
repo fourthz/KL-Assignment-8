@@ -51,10 +51,19 @@ hsb2 <- read.csv("hsb2.csv",
 ```
 
 ```{r}
-hsb_math_gender <- ggplot(hsb2, aes(math, science, color=female))+geom_point()
+hsb_math_gender <- ggplot(hsb2, aes(math, science, color=female))
 
-hsb_math_gender
+hsb_plot <- hsb_math_gender+geom_point()
+
+hsb_plot
+
+
 ```
 
+#4-------------------------------------------------------------------------------------------------
+
+```{r}
+hsb_plot+facet_wrap(~female)
+```
 
 
