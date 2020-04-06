@@ -1,0 +1,21 @@
+---
+title: Assignment 8
+author: Katy Linich
+date: 7 April, 2020
+output: html_notebook
+---
+
+#1-------------------------------------------------------------------------------------------------
+
+```{r}
+total_scores <- function(survey_data, scale_num, vector_num) {
+  survey_matrix <- as.matrix(survey_data)
+  survey_matrix[,vector_num] <- (scale_num+1) - survey_matrix[,vector_num]
+  sum_total_scores <- rowSums(survey_matrix)
+  survey_data$sum <- sum_total_scores
+  return(survey_data)
+}
+```
+
+
+
