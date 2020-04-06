@@ -36,4 +36,25 @@ write.csv(complete_surv_data, file = "Final_Survey_Data.csv")
 
 ```
 
+#3-------------------------------------------------------------------------------------------------
+
+```{r}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+```{r include=FALSE}
+hsb2 <- read.csv("hsb2.csv",
+                 header = TRUE,
+                 sep = ",")
+
+```
+
+```{r}
+hsb_math_gender <- ggplot(hsb2, aes(math, science, color=female))+geom_point()
+
+hsb_math_gender
+```
+
+
 
