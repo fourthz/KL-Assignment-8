@@ -15,6 +15,7 @@ total_scores <- function(survey_data, scale_num, vector_num) {
   survey_data$sum <- sum_total_scores
   return(survey_data)
 }
+```
 
 #2-------------------------------------------------------------------------------------------------
 
@@ -24,7 +25,7 @@ survey_scores <- read.csv("Book1.csv",
                           sep = ",")
 
 ```
-
+#3
 
 
 
